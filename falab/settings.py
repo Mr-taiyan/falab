@@ -130,6 +130,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Production
 # try:
-#     from production import *
+#     from .production import *
 # except:
 #     pass
