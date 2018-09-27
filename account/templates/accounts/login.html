@@ -3,6 +3,10 @@
 
 {% block content %}
 
+{% if error %}
+{{ error }}
+{% endif %}
+
 <div class="container mt-4 row">
     <div class="col-lg-5 col-md col-sm"></div>
     <form method="POST" action="{% url 'login' %}" class="col-lg-7 col-md-9 col-sm-12">

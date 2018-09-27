@@ -2,6 +2,10 @@
 
 {% block content %}
 
+{% if error %}
+{{ error }}
+{% endif %}
+
 <div class="container mt-4 ml-2">
     <form method="POST" action="{% url 'signup' %}">
     {% csrf_token %}
