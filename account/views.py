@@ -56,7 +56,6 @@ def login(request):
         return render(request,
                       'accounts/login.html',
                       {
-                          'error': 'Username or password is incorrect!',
                       }
                       )
 
