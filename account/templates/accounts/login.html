@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container mt-4 row">
+    <div class="col-lg-5 col-md col-sm"></div>
+    <form method="POST" action="{% url 'login' %}" class="col-lg-7 col-md-9 col-sm-12">
+        {% csrf_token %}
+        <div class="form-group row">
+            <label for="username" class="col-4 col-form-label">Username</label>
+            <input type="text" class="form-control col" id="username" name="username" placeholder="Username">
+        </div>
+        <div class="form-group row">
+            <label for="password" class="col-4 col-form-label">Password</label>
+            <input type="password" class="form-control col" id="password" name="password" placeholder="Password">
+        </div>
+        <div class="form-group row">
+            <div class="col-4"></div>
+            <button type="submit" class="btn btn-primary col" value="Login">Login</button>
+        </div>
+    </form>
+</div>
+<div class="row container">
+    <div class="col-lg-5 col-md col-sm"></div>
+    <div class="col-lg-7 col-md-9 col-sm-12">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col">
+                <p class="col">Click here to <a href="{% url 'signup' %}">sign up</a> if you don't have an account.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

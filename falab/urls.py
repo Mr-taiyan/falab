@@ -18,10 +18,13 @@ from django.urls import path
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
+import account.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # url setting for connectivity test
     # path('', views.indexTest, name='index'),
     path('', views.index, name='index'),
+    path('signup/', account.views.signup, name='signup'),
+    path('login/', account.views.login, name='login'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
