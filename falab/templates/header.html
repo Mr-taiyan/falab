@@ -1,6 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+{% load staticfiles %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}">FALAB</a>
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'letter-f.png' %}" alt="" height=30 width=30 class="d-inline-block align-top mt-2">
+            <p class="d-inline-block align-top mt-1 ml-1">FALAB</p>
+        </a>
 
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
