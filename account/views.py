@@ -64,3 +64,6 @@ def logout(request):
     if request.method == "POST":
         auth.logout(request)
         return redirect('index')
+    else:
+        auth.logout(request)
+        return redirect('index')
