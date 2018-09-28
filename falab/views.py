@@ -11,8 +11,9 @@ def index(request):
     """
     Temporary homepage for fun!!!
     """
+    # username = request.user.get_username()
     return render(request,
                   'index.html',
                   {
-
+                      # 'username': username,
                   })
