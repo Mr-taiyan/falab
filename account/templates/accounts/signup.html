@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
 
 
+
 {% block content %}
 
-{% if error %}
-{{ error }}
-{% endif %}
 
 <div class="container mt-4 row">
     <div class="col-lg-5 col-md col-sm"></div>
     <form method="POST" action="{% url 'signup' %}" class="col-lg-7 col-md-9 col-sm-12">
         {% csrf_token %}
         <div class="form-group row">
+            <div class="col-12 ml-5 text-center">
+                {% if error %}
+                <p class="error">{{ error }}</p>
+                {% endif %}
+            </div>
             <label for="username" class="col-4 col-form-label">Username</label>
             <input type="text" class="form-control col" id="username" name="username" placeholder="Username">
         </div>
