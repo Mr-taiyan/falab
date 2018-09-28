@@ -130,7 +130,7 @@ MEDIA_URL  = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Production
-# try:
-#     from .production import *
-# except:
-#     pass
+try:
+    from .production import *
+except:
+    pass
