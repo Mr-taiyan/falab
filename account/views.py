@@ -7,6 +7,7 @@ def signup(request):
     """
     Sign in page for account app
     """
+    auth.logout(request)
     if request.method == "POST":
         if request.POST['password1'] == request.POST['password2']:
             try:
@@ -39,6 +40,7 @@ def login(request):
     """
     Login page
     """
+    auth.logout(request)
     if request.method == "POST":
         user = auth.authenticate(username=request.POST['username'],
                           password=request.POST['password'],)
@@ -55,7 +57,7 @@ def login(request):
         return render(request,
                       'accounts/login.html',
                       {
-                      
+
                       })
 
 def logout(request):
